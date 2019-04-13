@@ -67,9 +67,13 @@ Write a function named sortNumbersByLength that takes in an array of numbers and
 For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
-const sortNumbersByLength = (arr) => {
-  // Solution code here...
-};
+const sortNumbersByLength = (arr) => arr.sort(function (a, b) {
+  let xx = a.toString().length;
+  let yy = b.toString().length;
+  if( xx < yy) {return -1}
+  if( xx > yy) {return 1}
+  return 0;
+});
 
 /*-----------------------------------------------------------------------------------------------
 CHALLENGE 7
@@ -89,9 +93,13 @@ const people = [
   new Person('Stan', 'Seattle', 67),
 ];
 
-const sortPeople = (arr) => {
-  // Solution code here...
-};
+const sortPeople = (arr) => arr.sort(function (a, b) {
+  let xx = a.lastName;
+  let yy = b.lastName;
+  if( xx < yy) {return -1}
+  if(xx > yy) {return 1}
+  return 0;
+})
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8
