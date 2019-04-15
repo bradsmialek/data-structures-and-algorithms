@@ -39,8 +39,8 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 const alphabetizeBetter = (arr) => arr.sort(function(a, b) {
   let xx = a.toLowerCase();
   let yy = b.toLowerCase();
-  if( xx < yy) {return -1};
-  if( xx > yy) {return 1};
+  if( xx < yy) {return -1}
+  if( xx > yy) {return 1}
   return 0;
 });
 
@@ -111,9 +111,26 @@ If two people share the same last name, alphabetize on their first name.
 If two people have the same full name, the younger one should come first. Do not worry about capitalization.
 ------------------------------------------------------------------------------------------------ */
 
-const sortPeopleBetter = (arr) => {
-  // Solution code here...
-};
+const sortPeopleBetter = (arr) => arr.sort(function (a, b) {
+  let xx = a.lastName;
+  let yy = b.lastName;
+  if( xx < yy) {return -1}
+  if(xx > yy) {return 1}
+  if( xx === yy) {
+    let xx = a.firstName;
+    let yy = b.firstName;
+    if(xx < yy) {return -1}
+    if(xx > yy) {return 1}
+    if(xx === yy) {
+      let xx = a.age;
+      let yy = b.age;
+      if(xx < yy) {return -1}
+      if(xx > yy) {return 1}
+    }
+  }
+  return 0;
+});
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
@@ -137,9 +154,19 @@ const meetings = [
   new Meeting('Friday', '1200', '1345'),
 ];
 
-const sortMeetingsByDay = (arr) => {
-  // Solution code here...
-};
+const sortMeetingsByDay = (arr) => arr.sort(function (a, b) {
+  let xx = a.dayOfWeek;
+  let yy = b.dayOfWeek;
+  if(xx === 'Monday') {return -1}
+  if(yy === 'Monday') {return 1}
+  if(xx === 'Tuesday') {return -1}
+  if(yy === 'Tuesday') {return 1}
+  if(xx === 'Wednesday') {return -1}
+  if(yy === 'Wednesday') {return 1}
+  if(xx === 'Friday') {return -1}
+  if(xx === 'Friday') {return 1}
+  return 0;
+});
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
