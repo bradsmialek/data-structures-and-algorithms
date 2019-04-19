@@ -26,10 +26,7 @@ Write a function named isCapitalized that takes in a string. This function shoul
 Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
-const isCapitalized = (str) => {
-  let arr = str.match(/([A-Z][a-z]*)/g);
-  return arr;
-};
+const isCapitalized = (str) => str.match(/([A-Z][a-z]*)/g);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -39,10 +36,14 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   let newArr = [];
-  arr.forEach(.match(/\b^[A-J]\w[\w]*/g));
-  return regex;
+  arr.forEach( (cities) => {
+    let regex = /^[A-J]/g;
+    if(regex.test(cities) === true) {
+      newArr.push(cities);
+    }
+  });
+  return newArr;
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -56,7 +57,11 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  // Solution code here...
+  if (input.toString().match(/^[oO]ct(ober)?$/g)) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -69,9 +74,7 @@ For example, if given the string "Hello, and have a wonderful day!", the word "H
 The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "a ", "wonderful "].
 ------------------------------------------------------------------------------------------------ */
 
-const noPunctuation = str => {
-  // Solution code here...
-};
+const noPunctuation = str => str.match(/[\w]*[\w][$ ]/g);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -85,9 +88,7 @@ The function should return a string containing the consonants in their original 
 For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 ------------------------------------------------------------------------------------------------ */
 
-let hangman = (str) => {
-  // Solution code here...
-};
+let hangman = str => str.replace(/[aeiouAEIOU]/g, '_');
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
