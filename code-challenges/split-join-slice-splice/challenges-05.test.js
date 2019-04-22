@@ -17,7 +17,7 @@ const howMuchPencil = (str) => {
   let result = [];
   for (let i = 0; i <= str.length; i++) {
     result.push(str.slice([i]));
-    console.log(result);
+    // console.log(result);
   }
   return result;
 };
@@ -85,7 +85,7 @@ const listFoods = (recipe) => {
     let firstSlice = ingredients.slice(ingredients.indexOf(' ') + 1);
     let secondSlice = firstSlice.slice(firstSlice.indexOf(' ') + 1);
     result.push(secondSlice);
-    console.log(result);
+    // console.log(result);
   });
   return result;
 };
@@ -119,7 +119,10 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 
 const stepActions = (recipe) => {
   let result = [];
-  // Solution code here...
+  recipe.steps.forEach( (verb) => {
+    result.push(verb.split(' ')[0]);
+    // console.log(result);
+  });
   return result;
 };
 
@@ -137,7 +140,12 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  // Solution code here...
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (arr[i] % 2 === 0) {
+      arr.splice(i, 1);
+    }
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
