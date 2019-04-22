@@ -100,12 +100,10 @@ You may also use other string or array methods.
 ------------------------------------------------------------------------------------------------ */
 
 const splitFoods = (recipe) => {
-  debugger;
   let result = [];
-  for (let i = 0; i < gruffaloCrumble.ingredients.length; i++) {
-    result.push(recipe[i].split(8));
-    console.log(result);
-  }
+  recipe.ingredients.forEach( (ingredients) => {
+    result.push(ingredients.split(' ').slice(2).join(' '));
+  });
   return result;
 };
 
