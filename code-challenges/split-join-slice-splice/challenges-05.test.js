@@ -81,9 +81,15 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  recipe.ingredients.forEach( (ingredients) => {
+    let firstSlice = ingredients.slice(ingredients.indexOf(' ') + 1);
+    let secondSlice = firstSlice.slice(firstSlice.indexOf(' ') + 1);
+    result.push(secondSlice);
+    console.log(result);
+  });
   return result;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -94,8 +100,12 @@ You may also use other string or array methods.
 ------------------------------------------------------------------------------------------------ */
 
 const splitFoods = (recipe) => {
+  debugger;
   let result = [];
-  // Solution code here...
+  for (let i = 0; i < gruffaloCrumble.ingredients.length; i++) {
+    result.push(recipe[i].split(8));
+    console.log(result);
+  }
   return result;
 };
 
