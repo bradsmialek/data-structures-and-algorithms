@@ -17,7 +17,7 @@ const howMuchPencil = (str) => {
   let result = [];
   for (let i = 0; i <= str.length; i++) {
     result.push(str.slice([i]));
-    console.log(result);
+    // console.log(result);
   }
   return result;
 };
@@ -81,9 +81,15 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  recipe.ingredients.forEach( (ingredients) => {
+    let firstSlice = ingredients.slice(ingredients.indexOf(' ') + 1);
+    let secondSlice = firstSlice.slice(firstSlice.indexOf(' ') + 1);
+    result.push(secondSlice);
+    // console.log(result);
+  });
   return result;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -95,7 +101,9 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  recipe.ingredients.forEach( (ingredients) => {
+    result.push(ingredients.split(' ').slice(2).join(' '));
+  });
   return result;
 };
 
@@ -111,7 +119,10 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 
 const stepActions = (recipe) => {
   let result = [];
-  // Solution code here...
+  recipe.steps.forEach( (verb) => {
+    result.push(verb.split(' ')[0]);
+    // console.log(result);
+  });
   return result;
 };
 
@@ -129,7 +140,12 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  // Solution code here...
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (arr[i] % 2 === 0) {
+      arr.splice(i, 1);
+    }
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -148,8 +164,15 @@ removeLastCharacters('Gregor', 9) returns ''
 ------------------------------------------------------------------------------------------------ */
 
 const removeLastCharacters = (str, numberOfCharacters) => {
-  // Solution code here...
+  if (numberOfCharacters > str.length){
+    return '';
+  }else if (numberOfCharacters < 0){
+    return str;
+  }
+  return str.split('').splice( 0, str.length - numberOfCharacters).join('');
+
 };
+
 
 
 /* ------------------------------------------------------------------------------------------------
