@@ -12,9 +12,7 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true };
 
-const getCourseKeys = (obj) => {
-  // Solution code here...
-};
+const getCourseKeys = (obj) => Object.keys(obj);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -70,7 +68,9 @@ let characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  // Solution code here...
+  for ( let values in arr){
+    houses.push(arr[values].house);
+  }
   return houses;
 };
 
@@ -90,8 +90,8 @@ const hasChildrenValues = (arr, character) => {
   let children;
   arr.forEach(person => {
     if (person.name === character) {
-      children = Object.values(person)[2].length > 0 ?
-        true : false;
+      // console.log(character);
+      children = Object.values(person)[2].length > 0 ? true : false;
     }
   });
   return children;
@@ -106,7 +106,14 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+  let children;
+  arr.forEach(person => {
+    if (person.name === character) {
+      console.log(character);
+      children = Object.entries(person.children).length > 0 ? true : false;
+    }
+  });
+  return children;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -115,9 +122,7 @@ CHALLENGE 5
 Write a function named totalCharacters that takes in an array and returns the number of characters in the array.
 ------------------------------------------------------------------------------------------------ */
 
-const totalCharacters = (arr) => {
-  // Solution code here...
-};
+const totalCharacters = (arr) => Object.keys(arr.length);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
