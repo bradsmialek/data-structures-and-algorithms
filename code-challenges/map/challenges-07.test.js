@@ -40,7 +40,7 @@ CHALLENGE 3
 Write a function named mapTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 1 and your forEachTwoToThe function from challenge 2, but uses map instead of a for loop or forEach.
 ------------------------------------------------------------------------------------------------ */
 
-const mapTwoToThe = (arr) => arr.map( (x) => Math.pow(2,x) );
+const mapTwoToThe = (arr) => arr.map( (x) => Math.pow(2,x) )
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -51,10 +51,15 @@ Read the MDN documentation on String.charCodeAt() if necessary.
 For example: charCode(['h','i']) returns [104, 105].
 ------------------------------------------------------------------------------------------------ */
 
-const charCode = (arr) => {
-  // Solution code here...
-};
-
+const charCode = (arr) => arr.map( ( char) => char.charCodeAt());
+  // debugger;
+  // let code = arr.map( num => {
+    
+  //   // num.charCodeAt()
+  //   return num.charCodeAt();
+  // });
+// }
+// charCode (['C', 'o', 'd', 'e', '3', '0', '1']);
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
