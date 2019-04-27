@@ -52,14 +52,7 @@ For example: charCode(['h','i']) returns [104, 105].
 ------------------------------------------------------------------------------------------------ */
 
 const charCode = (arr) => arr.map( ( char) => char.charCodeAt());
-  // debugger;
-  // let code = arr.map( num => {
-    
-  //   // num.charCodeAt()
-  //   return num.charCodeAt();
-  // });
-// }
-// charCode (['C', 'o', 'd', 'e', '3', '0', '1']);
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
@@ -71,8 +64,22 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
 
 const evenOdd = (arr) => {
-  // Solution code here...
-};
+  let newArr = [];
+  arr.map( (val) => {
+    if ( typeof val === "string") {
+      newArr.push('N/A');
+    }
+    else if (val%2 === 0) {
+      newArr.push('even');
+    }
+    else {
+      newArr.push('odd');
+    }
+  })
+  return newArr;
+}
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
