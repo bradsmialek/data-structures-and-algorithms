@@ -23,10 +23,15 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 
 const filterStringsWithVowels = (arr) => {
-  // Solution code here...
+  let newArr = [];
+  arr.filter( (string) => {
+    let regex = /[aeiouAEIOU]/g;
+    if(regex.test(string) === true) {
+      newArr.push(string);
+    }
+  });
+  return newArr;
 };
-
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -35,9 +40,7 @@ Write a function named notInFirstArray that, given two arrays as input, uses fil
 For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
-const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
-};
+const notInFirstArray = (forbiddenValues, arr) => arr.filter(element => !forbiddenValues.includes(element))
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
