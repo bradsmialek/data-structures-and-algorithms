@@ -109,7 +109,6 @@ const hasChildrenEntries = (arr, character) => {
   let children;
   arr.forEach(person => {
     if (person.name === character) {
-      console.log(character);
       children = Object.entries(person.children).length > 0 ? true : false;
     }
   });
@@ -122,7 +121,19 @@ CHALLENGE 5
 Write a function named totalCharacters that takes in an array and returns the number of characters in the array.
 ------------------------------------------------------------------------------------------------ */
 
-const totalCharacters = (arr) => Object.keys(arr.length);
+const totalCharacters = (arr) => {
+  let charCount = 0;
+  Object.values(arr).map((element)=> {
+    if (element.name){
+      charCount++;
+    } if (element.spouse){
+      charCount++;
+    } if(element.children.length > 0){
+      charCount+= element.children.length;
+    }
+  })
+  return charCount;
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
