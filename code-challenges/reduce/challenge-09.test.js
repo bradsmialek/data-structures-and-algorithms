@@ -8,10 +8,9 @@ Write a function named countNumberOfElements that, given an array as input, uses
 Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
-const countNumberOfElements = (arr) => {
-  // Solution code here...
-};
+const countNumberOfElements = arr => arr.reduce((acc, currIdx, currVal, arr) => arr.length)
 
+// countNumberOfElements([1, 2, 3, 4, 5]);
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -69,8 +68,13 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  // Solution code here...
+  let newArr = [];
+  arr.reduce((acc, currIdx) => {
+    newArr.push(currIdx.name);
+  }, 0);
+  return newArr;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -80,9 +84,7 @@ Write a function named reversedString that takes in a string and returns a strin
 Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------ */
 
-const reversedString = (arr) => {
-  // Solution code here...
-};
+const reversedString = (arr) => arr.split('').reduce((acc, currIdx)=> currIdx + acc)
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -134,7 +136,12 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-  // Solution code here...
+  let count = 0;
+  arr.reduce((acc, currIdx)=> {
+    let num = (currIdx.children ? currIdx.children.length : 0);
+    count += num;
+  },0);
+  return count;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -144,10 +151,7 @@ Write a function that, given an array of numbers as input, uses reduce to calcul
 
 Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
-
-const calculateAverage = (arr) => {
-  // Solution code here...
-};
+const calculateAverage = (arr) => arr.reduce((acc, currIdx)=> acc + currIdx, 0) / arr.length
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6

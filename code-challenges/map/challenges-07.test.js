@@ -170,9 +170,12 @@ const snorlaxStats = {
 };
 
 const extractStats = (arr) => {
-  // Solution code here...
+  debugger;
+  Object.values(arr).map((element)=> {
+    return element.stat;
+  })
 };
-
+extractStats(snorlaxStats.stats);
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
