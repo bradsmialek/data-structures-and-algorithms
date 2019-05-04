@@ -8,10 +8,11 @@ Write a function named countNumberOfElements that, given an array as input, uses
 Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
-const countNumberOfElements = (arr) => {
-  // Solution code here...
-};
+const countNumberOfElements = arr => arr.reduce(function(accumulator, currentValue) {
+  return accumulator , currentValue ;
+});
 
+// countNumberOfElements([1, 2, 3, 4, 5]);
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
