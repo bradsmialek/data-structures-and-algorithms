@@ -84,7 +84,7 @@ Write a function named reversedString that takes in a string and returns a strin
 Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------ */
 
-const reversedString = (arr) => arr.split('').reduce((rev, char)=> char + rev, '')
+const reversedString = (arr) => arr.split('').reduce((acc, currIdx)=> currIdx + acc)
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -136,7 +136,12 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-  // Solution code here...
+  let count = 0;
+  arr.reduce((acc, currIdx)=> {
+    let num = (currIdx.children ? currIdx.children.length : 0);
+    count += num;
+  },0);
+  return count;
 };
 
 /* ------------------------------------------------------------------------------------------------
