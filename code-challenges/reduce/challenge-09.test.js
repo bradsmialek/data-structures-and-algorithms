@@ -84,9 +84,7 @@ Write a function named reversedString that takes in a string and returns a strin
 Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------ */
 
-const reversedString = (arr) => {
-  // Solution code here...
-};
+const reversedString = (arr) => arr.split('').reduce((rev, char)=> char + rev, '')
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
