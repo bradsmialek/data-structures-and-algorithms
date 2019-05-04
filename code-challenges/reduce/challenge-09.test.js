@@ -8,9 +8,7 @@ Write a function named countNumberOfElements that, given an array as input, uses
 Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
-const countNumberOfElements = arr => arr.reduce(function(accumulator, currentValue) {
-  return accumulator , currentValue ;
-});
+const countNumberOfElements = arr => arr.reduce((acc, currIdx, currVal, arr) => arr.length)
 
 // countNumberOfElements([1, 2, 3, 4, 5]);
 /* ------------------------------------------------------------------------------------------------
@@ -70,8 +68,13 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  // Solution code here...
+  let newArr = [];
+  arr.reduce((acc, currIdx) => {
+    newArr.push(currIdx.name);
+  }, 0);
+  return newArr;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
