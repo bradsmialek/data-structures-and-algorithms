@@ -11,8 +11,17 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-  // Solution code here...
+
+  let count = '';
+  input.map((inp)=> {
+    inp.map((int)=> {
+      count += target === int ? '1':'' ;
+    });
+  });
+  return count.length;
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -24,9 +33,7 @@ You may want to use filter, map, or reduce for this problem, but are not require
 For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
-const totalSum = (input) => {
-  // Solution code here...
-};
+const totalSum = (input) => input.reduce((acc, cv) => acc.concat(cv),[]).reduce((acc, cv)=> acc+= cv)
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
