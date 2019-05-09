@@ -8,7 +8,7 @@ Write a function named countNumberOfElements that, given an array as input, uses
 Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
-const countNumberOfElements = arr => arr.reduce((acc, currIdx, currVal, arr) => arr.length)
+const countNumberOfElements = arr => arr.reduce((acc) => acc++)
 
 // countNumberOfElements([1, 2, 3, 4, 5]);
 /* ------------------------------------------------------------------------------------------------
@@ -162,6 +162,7 @@ You are welcome to use the provided isPrime function.
 ------------------------------------------------------------------------------------------------ */
 
 const isPrime = (value) => {
+  debugger;
   for (let i = 2; i < value; i++) {
     if (value % i === 0) {
       return false;
@@ -171,8 +172,11 @@ const isPrime = (value) => {
 };
 
 const countPrimeNumbers = (arr) => {
+  debugger;
   // Solution code here...
 };
+isPrime([1, 2, 13, 64, 45, 56, 17, 8]);
+countPrimeNumbers([1, 2, 13, 64, 45, 56, 17, 8]);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
