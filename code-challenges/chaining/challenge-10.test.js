@@ -111,10 +111,11 @@ let starWarsData = [{
   birth_year: '19BBY',
   gender: 'female'
 }];
+debugger;
+let findMaleAndFemale = (data) => data.filter((char)=> char.gender === 'male' || char.gender ==='female').map((char)=> char.name).join(' and ')
 
-let findMaleAndFemale = (data) => {
-  // Solution code here...
-};
+
+findMaleAndFemale(starWarsData)
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
