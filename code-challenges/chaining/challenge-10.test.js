@@ -111,11 +111,10 @@ let starWarsData = [{
   birth_year: '19BBY',
   gender: 'female'
 }];
-debugger;
+
 let findMaleAndFemale = (data) => data.filter((char)=> char.gender === 'male' || char.gender ==='female').map((char)=> char.name).join(' and ')
 
 
-findMaleAndFemale(starWarsData)
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -123,9 +122,9 @@ CHALLENGE 5
 Write a function named findShortest that, given the Star Wars data from Challenge 6, uses any combination of filter, map and reduce to return the name of the shortest character.
 ------------------------------------------------------------------------------------------------ */
 
-let findShortest = (data) => {
-  // Solution code here...
-};
+let findShortest = (data) => data.map((char)=> char.name).reduce((acc, curVal)=> acc.length < curVal.length ? acc : curVal)
+
+
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
