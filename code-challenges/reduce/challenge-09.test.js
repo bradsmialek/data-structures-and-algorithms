@@ -162,7 +162,6 @@ You are welcome to use the provided isPrime function.
 ------------------------------------------------------------------------------------------------ */
 
 const isPrime = (value) => {
-  debugger;
   for (let i = 2; i < value; i++) {
     if (value % i === 0) {
       return false;
@@ -171,11 +170,12 @@ const isPrime = (value) => {
   return value > 1;
 };
 
-const countPrimeNumbers = (arr) => {
-  debugger;
-  // Solution code here...
-};
-isPrime([1, 2, 13, 64, 45, 56, 17, 8]);
+// const countPrimeNumbers = (arr) => {
+//   debugger;
+//   // Solution code here...
+// };
+
+
 countPrimeNumbers([1, 2, 13, 64, 45, 56, 17, 8]);
 
 /* ------------------------------------------------------------------------------------------------
