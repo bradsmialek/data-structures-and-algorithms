@@ -169,13 +169,8 @@ const snorlaxStats = {
   weight: 4600,
 };
 
-const extractStats = (arr) => {
-  debugger;
-  Object.values(arr).map((element)=> {
-    return element.stat;
-  })
-};
-extractStats(snorlaxStats.stats);
+const extractStats = (arr) => arr.map((obj) => send = {name: obj.stat.name, total: obj.effort + obj.baseStat})
+
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
