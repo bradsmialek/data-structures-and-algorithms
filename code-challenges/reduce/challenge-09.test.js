@@ -170,13 +170,8 @@ const isPrime = (value) => {
   return value > 1;
 };
 
-// const countPrimeNumbers = (arr) => {
-//   debugger;
-//   // Solution code here...
-// };
+const countPrimeNumbers = (array) => array.reduce((accumulator, currentValue) => isPrime(currentValue) ? accumulator + 1 : accumulator, 0)
 
-
-countPrimeNumbers([1, 2, 13, 64, 45, 56, 17, 8]);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
@@ -216,10 +211,10 @@ const snorlaxData = {
   name: 'snorlax',
   weight: 4600,
 };
+// debugger;
+const extractStat = (statName, arr) => arr.reduce((prev, currVal)=> currVal.stat.name === statName ? currVal : prev, 0)
 
-const extractStat = (statName, arr) => {
-  // Solution code here...
-};
+// extractStat('speed', snorlaxData.stats)
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
