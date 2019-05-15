@@ -92,7 +92,11 @@ The top row of the board is considered row zero and row numbers increase as they
 ------------------------------------------------------------------------------------------------ */
 
 const battleship = (board, row, col) => {
-  //  Solution code here...
+  if(board[row][col] === '#') {
+    return 'hit';
+  } else {
+    return 'miss';
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -102,10 +106,16 @@ Write a function named calculateProduct that takes in a two-dimensional array of
 
 For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
+// debugger;
+const calculateProduct = (numbers) => numbers.reduce((prev, curr)=> prev.concat(curr)).reduce((previ, currr)=> previ*currr)
 
-const calculateProduct = (numbers) => {
-  // Solution code here...
-};
+
+// .reduce((prev, curr)=> prev === 0 ? 0 : prev*curr )
+
+
+// calculateProduct([[1,2], [3,4], [5,6]]);
+// calculateProduct([[2, 3, 4, 6, 0], [4, 3, 7], [2, 4, 6]]);
+// calculateProduct([[1,2], [], [3,4,5]]);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
