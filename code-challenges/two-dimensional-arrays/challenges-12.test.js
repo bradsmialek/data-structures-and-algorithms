@@ -127,7 +127,7 @@ const weeklyTemperatures = [
   [65, 56, 55, 52, 55, 62, 57],
 ];
 
-const averageDailyTemperature = (weather) => weather.reduce((prev, curr, ind, arr)=>  prev.concat(curr)).reduce((prev, curr, ind, arr)=> ind === arr.length-1 ? (prev+curr)/(arr.length) : prev+curr)
+const averageDailyTemperature = (weather) => weather.reduce((prev, curr, ind, arr)=> prev.concat(curr)).reduce((prev, curr, ind, arr)=> ind === arr.length-1 ? (prev+curr)/(arr.length) : prev+curr)
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -147,9 +147,8 @@ let lowestWeeklyTemperatureData = [
   [65, 56, 55, 52, 55, 62, 57],
 ];
 
-const lowestWeeklyAverage = (weather) => {
-  // Solution code here...
-};
+const lowestWeeklyAverage = (weather) => weather.map((temps)=> temps.reduce((prev, curr, ind, arr)=> ind === arr.length-1  ? (prev+curr)/(arr.length) : prev+curr)).reduce((prev,curr)=> prev < curr ? prev : curr )
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8
