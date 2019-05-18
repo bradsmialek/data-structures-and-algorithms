@@ -147,7 +147,7 @@ let lowestWeeklyTemperatureData = [
   [65, 56, 55, 52, 55, 62, 57],
 ];
 
-const lowestWeeklyAverage = (weather) => weather.map((temps)=> temps.reduce((prev, curr, ind, arr)=> ind === arr.length-1  ? (prev+curr)/(arr.length) : prev+curr)).reduce((prev,curr)=> prev < curr ? prev : curr )
+const lowestWeeklyAverage = (weather) => weather.map((temps)=> temps.reduce((prev, curr, ind, arr)=> ind === arr.length-1 ? (prev+curr)/(arr.length) : prev+curr)).reduce((prev,curr)=> prev < curr ? prev : curr )
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -162,9 +162,7 @@ The function should parse the string as rows and columns and compute the sum of 
 For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
-const excel = (str) => {
-  // Solution code here...
-};
+const excel = (str) => str.match(/[0-9],[0-9],[0-9]/g).map((each)=> parseInt(each)*3)
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
