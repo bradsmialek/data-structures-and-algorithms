@@ -40,15 +40,15 @@ Write a function named onlyOddChars that takes in a string and returns only the 
 
 For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
-// debugger;
-// const onlyOddChars = (str) => {
-//   return str.every((val, ind)=> ind % 1 === 0 ? val : '')
-// };
+debugger;
+const onlyOddChars = (str) => {
+  return str.charAt(1,3,5,7,9);
+};
 
-// onlyOddChars('0123456789');
-// onlyOddChars('abcd');
-// onlyOddChars('a');
-// onlyOddChars('');
+onlyOddChars('0123456789');
+onlyOddChars('abcd');
+onlyOddChars('a');
+onlyOddChars('');
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
@@ -78,9 +78,8 @@ CHALLENGE 7
 Write a function named findEvery that takes in an array of strings, along with a target string. Return a Boolean based on whether or not every string in the array contains the target string.
 ------------------------------------------------------------------------------------------------ */
 
-const findEvery = (arr, target) => {
-  // Solution code here...
-};
+const findEvery = (arr, target) => arr.every((str) => str.includes(target));
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8
