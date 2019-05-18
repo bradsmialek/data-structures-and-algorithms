@@ -110,13 +110,6 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 const calculateProduct = (numbers) => numbers.reduce((prev, curr)=> prev.concat(curr)).reduce((previ, currr)=> previ*currr)
 
 
-// .reduce((prev, curr)=> prev === 0 ? 0 : prev*curr )
-
-
-// calculateProduct([[1,2], [3,4], [5,6]]);
-// calculateProduct([[2, 3, 4, 6, 0], [4, 3, 7], [2, 4, 6]]);
-// calculateProduct([[1,2], [], [3,4,5]]);
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
@@ -126,6 +119,7 @@ Calculate the average daily temperature during that entire period. Your output s
 ------------------------------------------------------------------------------------------------ */
 
 // Real daily average temperatures for Seattle, October 1-28 2017
+
 const weeklyTemperatures = [
   [66, 64, 58, 65, 71, 57, 60],
   [57, 65, 65, 70, 72, 65, 51],
@@ -133,9 +127,8 @@ const weeklyTemperatures = [
   [65, 56, 55, 52, 55, 62, 57],
 ];
 
-const averageDailyTemperature = (weather) => {
-  // Solution code here...
-};
+const averageDailyTemperature = (weather) => weather.reduce((prev, curr, ind, arr)=> prev.concat(curr)).reduce((prev, curr, ind, arr)=> ind === arr.length-1 ? (prev+curr)/(arr.length) : prev+curr)
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
@@ -154,9 +147,8 @@ let lowestWeeklyTemperatureData = [
   [65, 56, 55, 52, 55, 62, 57],
 ];
 
-const lowestWeeklyAverage = (weather) => {
-  // Solution code here...
-};
+const lowestWeeklyAverage = (weather) => weather.map((temps)=> temps.reduce((prev, curr, ind, arr)=> ind === arr.length-1 ? (prev+curr)/(arr.length) : prev+curr)).reduce((prev,curr)=> prev < curr ? prev : curr )
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8
@@ -170,9 +162,7 @@ The function should parse the string as rows and columns and compute the sum of 
 For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
-const excel = (str) => {
-  // Solution code here...
-};
+const excel = (str) => str.match(/[0-9],[0-9],[0-9]/g).map((each)=> parseInt(each)*3)
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
