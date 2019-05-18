@@ -10,7 +10,6 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 
 const firstLetters = (arr) => arr.map((char)=> char.charAt(0))
 
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -19,9 +18,7 @@ Write a function named findHappiness that takes in an array of strings and retur
 For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this is great :)', ':)))))']
 ------------------------------------------------------------------------------------------------ */
 
-const findHappiness = (arr) => {
-  // Solution code here...
-};
+const findHappiness = (arr) => arr.map((val)=> val.includes(':)') ? val : '' ).filter((e)=> e !== '')
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
