@@ -30,7 +30,7 @@ For example, (123) 456-7890 returns 1234567890
 
 const standardizePhoneNumbers = (arr) => {
   let regex = /[0-9]/g;
-  return arr.map((val)=> val.includes(val.match(regex)) ? val.match(regex) : val.match(regex).join(''))
+  return arr.map((val)=> val.includes(val.match(regex)) ? 'who gives a crap' : val.match(regex).join(''))
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -40,30 +40,37 @@ Write a function named onlyOddChars that takes in a string and returns only the 
 
 For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
+// debugger;
+// const onlyOddChars = (str) => {
+//   return str.every((val, ind)=> ind % 1 === 0 ? val : '')
+// };
 
-const onlyOddChars = (str) => {
-  // Solution code here...
-};
-
+// onlyOddChars('0123456789');
+// onlyOddChars('abcd');
+// onlyOddChars('a');
+// onlyOddChars('');
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
 Write a function named allHappy that takes in an array of strings and returns a Boolean indicating whether all those strings contain ":)".
 ------------------------------------------------------------------------------------------------ */
 
-const allHappy = (arr) => {
-  // Solution code here...
-};
+const allHappy = (arr) => arr.every((val) => val.includes(':)'));
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
 Write a function named findAnything that takes in an array of strings, along with a target string. Return an array containing only those strings from the original array that contain the target string.
 ------------------------------------------------------------------------------------------------ */
+// const words = ['things', 'apple (:)', ':)banana', 'missing that thing', 'cant:)aloupe'];
 
-const findAnything = (arr, target) => {
-  // Solution code here...
-};
+// debugger;
+const findAnything = (arr, target) => arr.filter((str) => str.includes(target));
+
+
+// findAnything(words, ':)');
+// findAnything(words, 'i');
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
