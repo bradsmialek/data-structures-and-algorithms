@@ -40,15 +40,14 @@ Write a function named onlyOddChars that takes in a string and returns only the 
 
 For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
-debugger;
-const onlyOddChars = (str) => {
-  return str.charAt(1,3,5,7,9);
-};
 
-onlyOddChars('0123456789');
-onlyOddChars('abcd');
-onlyOddChars('a');
-onlyOddChars('');
+const onlyOddChars = (str) => {
+  let odd = ''
+  for(let i= 1; i< str.length; i+=2){
+    odd += str.charAt(i);
+  }
+  return odd;
+}
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
@@ -93,9 +92,7 @@ Return a two-dimensional array with the same roster, but where anyone whose name
 For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again', 'still Brook']] returns [['Actual Person'], ['Human Person']]
 ------------------------------------------------------------------------------------------------ */
 
-const unenrollBrook = (arr) => {
-  // Solution code here...
-};
+const unenrollBrook = (arr) => arr.map((course)=> course.filter((person)=> !person.includes('Brook')))
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
