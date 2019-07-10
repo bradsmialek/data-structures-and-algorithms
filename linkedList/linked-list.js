@@ -26,6 +26,22 @@ class LinkedList {
     }
     return false
   }
+  append(value) {
+    if (this.head === null) {
+      this.head = new Node (value);
+      return;
+    }
+    // let current = this.head
+    // while (current.value === null) {
+    //  if (this.head === null) {
+    //    this.head = new Node (value);
+
+
+    //   current = current.next;
+    // }
+    // current.next = new Node (value);
+    // return value;
+
   toString() {
     let ans = '';
     let current = this.head;
@@ -38,13 +54,19 @@ class LinkedList {
 
 }
 
-// let list = new LinkedList();
-// list.insert('brad');
-// list.insert('jessica');
-// list.insert('zach');
-// list.insert('jonah');
-
+let list = new LinkedList();
 // console.log(list);
+list.insert('brad');
+// console.log(list);
+// list.insert('jessica');
+// console.log(list);
+// list.insert('zach');
+// console.log(list);
+// list.insert('jonah'); 
+// console.log(list);
+list.append('jonny');
+list.includes('jonny');
+console.log(list);
 
 module.exports = LinkedList;
 
