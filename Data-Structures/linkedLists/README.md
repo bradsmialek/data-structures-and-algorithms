@@ -57,4 +57,3 @@ Write a method for the Linked List class which takes a number, k, as a parameter
 
 ![WhiteBoard](./assets/ll_kth_from_end.jpg)
 
-![WhiteBoard](./assets/ll_kth_from_end.jpg)
