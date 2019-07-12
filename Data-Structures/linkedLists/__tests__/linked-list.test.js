@@ -1,4 +1,4 @@
-const Linkedlist = require('../linkedList/linked-list.js');
+const Linkedlist = require('../linked-list');
 
 describe('Testing Singly Linked Lists', () => {
 
@@ -6,7 +6,7 @@ describe('Testing Singly Linked Lists', () => {
 
   test('Can successfully instantiate an empty linked list', () =>{
     list = new Linkedlist();
-    
+
     expect(list).toEqual({"head": null, "tail": null})
   });
   test('Can properly insert into the linked list', () => {
@@ -19,6 +19,7 @@ describe('Testing Singly Linked Lists', () => {
     list.insert('jessica');
     console.log(list.head.value);
     expect(list.head.value).toEqual('jessica');
+    // eslint-disable-next-line no-trailing-spaces
     
   });
   test('Can properly insert multiple nodes into the linked list', () =>{
@@ -54,12 +55,7 @@ describe('Testing Singly Linked Lists', () => {
     console.log(list.value);
     expect(list.includes('brad','jessica', 'zach', 'jonah')).toBeTruthy();
   })
+
+  
 });
 
-// Can successfully instantiate an empty linked list
-// Can properly insert into the linked list
-// The head property will properly point to the first node in the linked list
-// Can properly insert multiple nodes into the linked list
-// Will return true when finding a value within the linked list that exists
-// Will return false when searching for a value in the linked list that does not exist
-// Can properly return a collection of all the values that exist in the linked list

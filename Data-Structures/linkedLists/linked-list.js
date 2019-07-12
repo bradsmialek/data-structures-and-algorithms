@@ -41,6 +41,7 @@ class LinkedList {
     // }
     // current.next = new Node (value);
     // return value;
+  }
 
   toString() {
     let ans = '';
@@ -52,6 +53,34 @@ class LinkedList {
     return ans;
   }
 
+  kFromTheEnd(k) {
+    let counter = 0;
+    let newCount = 0;
+    let current = this.head;
+    console.log('current should equal this.head *9*, 22, 7, 5 =', current.value);
+
+    while (current !== null) {
+      console.log('iterate current= ', current.value, 'now add to counter');
+      current = current.next;
+      counter++;
+      console.log('counter total =', counter);
+    }
+
+    current = this.head;
+
+    while (current !== null) {
+      console.log('2nd while loop starts at current', current.value);
+      let target = counter - k;
+      console.log('2nd while iterates current =',current.value);
+      newCount++;
+      console.log('newCount', newCount);
+      if (target === newCount) {
+        console.log(current.value);
+        return current.value;
+      }
+      current = current.next;
+    }
+  }
 }
 
 let list = new LinkedList();
@@ -62,11 +91,12 @@ list.insert('brad');
 // console.log(list);
 // list.insert('zach');
 // console.log(list);
-// list.insert('jonah'); 
+// list.insert('jonah');
 // console.log(list);
 list.append('jonny');
 list.includes('jonny');
 console.log(list);
+list.kFromTheEnd(3);
 
 module.exports = LinkedList;
 
