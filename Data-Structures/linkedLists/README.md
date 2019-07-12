@@ -13,9 +13,9 @@ Define a method called toString (or __str__ in Python) which takes in no argumen
 
 ## Solution
 
-![WhiteBoard](/assets/ll_insertions.jpg)
+![WhiteBoard](./assets/ll_insertions.jpg)
 
-![WhiteBoard](/assets/ll_insertions2.jpg)
+![WhiteBoard](./assets/ll_insertions2.jpg)
 
 
 
@@ -34,9 +34,9 @@ Linked list insertions.
 
 ## Solution
 
-![WhiteBoard](/assets/ll_insertions.jpg)
+![WhiteBoard](./assets/ll_insertions.jpg)
 
-![WhiteBoard](/assets/ll_insertions2.jpg)
+![WhiteBoard](./assets/ll_insertions2.jpg)
 
 
 
@@ -55,6 +55,6 @@ Write a method for the Linked List class which takes a number, k, as a parameter
 ## Solution
 <!-- Embedded whiteboard image -->
 
-![WhiteBoard](/assets/ll_kth_from_end.jpg)
+![WhiteBoard](./assets/ll_kth_from_end.jpg)
 
-![WhiteBoard](/assets/ll_kth_from_end.jpg)
+![WhiteBoard](./assets/ll_kth_from_end.jpg)
