@@ -4,7 +4,7 @@ class Node {
   constructor(value) {
     this.value = value;
     this.next = null;
-    
+
   }
 }
 
@@ -20,7 +20,7 @@ class LinkedList {
     newNode.next = this.head;//this.head is still [10] now we make new node point(next) to [10]  // [8]->[10]
     this.head = newNode;// now make the head the new node [8]
     // console.log('this.head = ',this.head);
- 
+
   }
   // [10]->[12]->[14]->null
   // check if list has node with given params(12)
@@ -40,7 +40,7 @@ class LinkedList {
       current = current.next;
     }
   }
-  
+
   // [10]->[12]->[14]->null
   // append new node to end of list
   // 1. check if nodes exist -> if not make this new node the head
@@ -50,7 +50,7 @@ class LinkedList {
       this.head = new Node(value); //new node is now the head
       return; // return to exit method or it will run the loop and append it again
     }
-    let current = this.head; // assign variable to be the head [10] 
+    let current = this.head; // assign variable to be the head [10]
     while(current.next){ // [10]->[12]->[14]->null run loop until there is no node
       current = current.next;
     }
@@ -67,7 +67,7 @@ class LinkedList {
     }
     return newString;
   }
-    
+
   insertAfter(value, newValue){// [10]->[14]->null
     if(!this.head){
       this.head = new Node(newValue);
@@ -114,8 +114,12 @@ class LinkedList {
       counter++;
       // console.log('counter total =', counter);
     }
+
     current = this.head;
     while (current !== null) {
+      if(k > counter){
+        throw new Error('There is no node here, try a smaller value.');
+      }
       // console.log('2nd while loop starts at current', current.value);
       let target = counter - k;
       // console.log('2nd while iterates current =',current.value);
@@ -126,7 +130,7 @@ class LinkedList {
         return current.value;
       }
       current = current.next;
-    } 
+    }
   }
   showLinkedList() {
     let output ='[';
