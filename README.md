@@ -1,5 +1,7 @@
 
 # data-structures-and-algorithms
+
+# Author - Brad Smialek
   
 
 # Table of contents
