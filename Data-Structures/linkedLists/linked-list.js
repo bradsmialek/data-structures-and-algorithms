@@ -58,7 +58,7 @@ class LinkedList {
     let newString = '';
     let current = this.head;
     while (current) {
-      newString += `, ${current.value}`;
+      newString += `${current.value} , `;
       current = current.next;
     }
     return newString;
