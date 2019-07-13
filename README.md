@@ -25,8 +25,8 @@
 - [Linked Lists](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/Data-Structures/linkedLists)
 
 
-## This is the introduction <a name="introduction"></a>
-Some introduction text, formatted in heading 2 style
+## Code Fellows <a name="introduction"></a>
+This page features my journey through 301 and 401 code challenges working with algorithms and data structures. 
 
 ## Some paragraph <a name="paragraph1"></a>
 The first paragraph text
