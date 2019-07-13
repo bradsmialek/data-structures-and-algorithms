@@ -13,29 +13,32 @@ class LinkedList {
     this.head = null;
   }
   // [10]->[12]->[14]->null
-  // 1. make node [val]
-  // 2. insert new node at beginning [val]->[10]->[12]...
+  // 1. make node [8]
+  // 2. insert new node at beginning [8]->[10]->[12]...
   insert(value) {
     let newNode = new Node(value)//new node made
-    newNode.next = this.head;//this.head is still [10] now we make new node point(next) to [10]  // [val]->[10]
-    this.head = newNode;// now make the head the new node [val]
-    
+    newNode.next = this.head;//this.head is still [10] now we make new node point(next) to [10]  // [8]->[10]
+    this.head = newNode;// now make the head the new node [8]
+    // console.log('this.head = ',this.head);
+ 
   }
   // [10]->[12]->[14]->null
   // check if list has node with given params(12)
   // traverse list starting at head and check each node value
   includes(value) { //(12)
     let current = this.head// [10] start
-    while (current.next) {
+    // console.log('current = ',current);
+    while (current) {
+      if (current.value === value) {
+        // console.log(true);
+        return true;
+      }
+      else if (current === null){
+        // console.log(false);
+        return false;
+      }
       current = current.next;
-        if (current.value === value) {
-          console.log(true);
-          return true;
-        }
-        current = current.next;
     }
-    console.log(false);
-    return false;
   }
   
   // [10]->[12]->[14]->null
@@ -53,16 +56,52 @@ class LinkedList {
     }
     current.next = new Node(value);// found the end -> put the new node on the end [10]->[12]->[14]->[8]->null
   }
-  // returns all node values as a string
+
   toString() {
     let newString = '';
     let current = this.head;
     while (current) {
       newString += `${current.value} , `;
+      // console.log('newString =', newString);
       current = current.next;
     }
     return newString;
   }
+    
+  insertAfter(value, newValue){// [10]->[14]->null
+    if(!this.head){
+      this.head = new Node(newValue);
+      return;
+    }
+    let current = this.head;
+    while(current.value !== value){
+      current = current.next;
+    }
+    let node = new Node(newValue);
+    node.next = current.next;
+    current.next = node;
+  }
+  //insertBefore(14, 'Before');
+  // [10]->[14]->null
+  insertBefore(value, newValue){// (14, 'I go before you')
+    if(!this.head){
+      this.head = new Node(newValue);
+      return;
+    }
+    if(value === this.head.value){
+      this.insert(newValue);
+      return;
+    }
+    let current = this.head;
+
+    while(current.next.value !== value){
+      current = current.next;
+    }
+    let node = new Node(newValue);
+    node.next = current.next;
+    current.next = node;
+  }
+
 
   kFromTheEnd(k) {
     let counter = 0;
@@ -82,9 +121,9 @@ class LinkedList {
       // console.log('2nd while iterates current =',current.value);
       newCount++;
       // console.log('newCount', newCount);
-       if (target === newCount) {
+      if (target === newCount) {
         // console.log(current.value);
-          return current.value;
+        return current.value;
       }
       current = current.next;
     } 
@@ -105,27 +144,26 @@ class LinkedList {
 }
 
 let list = new LinkedList();
-console.log('List',list);
+// console.log('List',list);
 list.insert(14);
-// console.log(list);
 list.insert(12);
-// console.log(list);
 list.insert(10);
-// console.log(list);
-// list.insert(9); 
-// console.log(list);
-list.append('8');
-// list.append('6');
-
-list.includes(12);
-
-
-list.toString();
-
 list.showLinkedList();
-
-
+// list.append('8');
+// list.append('6');
+// list.includes(12);
+// list.includes(19);
+// list.toString();
+// list.insertAfter(14, 'After');
+// list.showLinkedList();
+// list.insertAfter(10, 'You');
+// list.showLinkedList();
 // list.kFromTheEnd(2);
+// list.showLinkedList();
+list.insertBefore(14, 'Before');
+list.showLinkedList();
+list.insertBefore(10,'Head');
+list.showLinkedList();
 
 module.exports = LinkedList;
 
