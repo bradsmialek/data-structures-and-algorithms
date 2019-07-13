@@ -1,12 +1,6 @@
 
-
-##### Table of Contents  
-[Headers](#headers)  
-[Emphasis](#emphasis)  
-   
-<a name="headers"/>
-## Headers
-
+# data-structures-and-algorithms
+  
 
 # Table of contents
 1. [Introduction](#introduction)
