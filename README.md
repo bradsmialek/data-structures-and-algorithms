@@ -1,7 +1,10 @@
 
-# data-structures-and-algorithms
+# Data Structures and Algorithms
 
 # Author - Brad Smialek
+## Code Fellows
+### 301- Intermediate Javascript
+### 401- Advanced Javascript
   
 
 # Table of contents
