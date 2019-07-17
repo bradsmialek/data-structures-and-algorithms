@@ -74,5 +74,4 @@ Write a function called mergeLists which takes two linked lists as arguments. Zi
 
 ![WhiteBoard](./assets/ll_merge.jpg)
 
-![WhiteBoard](./assets/ll_merge2.jpg)
 
