@@ -1,4 +1,10 @@
 const Linkedlist = require('../linked-list');
+const mergeLists = require('../llMerge/ll-merge.js');
+
+//Test should include;
+// “Happy Path” - Expected outcome
+// Expected failure
+// Edge Case (if applicable/obvious)
 
 describe('Testing Singly Linked Lists', () => {
 
@@ -56,104 +62,150 @@ describe('Testing Singly Linked Lists', () => {
   })
 
   //Challenge 6 tests
-  test('Can successfully add a node to the end of the linked list', () => {
-    let list = new Linkedlist();
-    list.insert('brad');
-    list.insert('jessica');
-    list.insert('zach');
-    list.insert('jonah');
-    list.append('2')
-    list.showLinkedList();
-    expect(list.toString()).toEqual('jonah , zach , jessica , brad , 2 , ');
+  describe('testing append, insertBefore, and insertAfter methods', () => {
+    it('Can successfully add a node to the end of the linked list', () => {
+      let list = new Linkedlist();
+      list.insert('brad');
+      list.insert('jessica');
+      list.insert('zach');
+      list.insert('jonah');
+      list.append('2')
+      list.showLinkedList();
+      expect(list.toString()).toEqual('jonah , zach , jessica , brad , 2 , ');
+    });
+    it('Can successfully add multiple nodes to the end of a linked list', () => {
+      let list = new Linkedlist();
+      list.insert('brad');
+      list.insert('jessica');
+      list.insert('zach');
+      list.insert('jonah');
+      list.append(2);
+      list.append(4);
+      list.append(6);
+      list.append(8);
+      expect(list.toString()).toEqual('jonah , zach , jessica , brad , 2 , 4 , 6 , 8 , ');
+    });
+    it('Can successfully insert a node before a node located in the middle of a linked list', () =>{
+      let list = new Linkedlist();
+      list.insert('brad');
+      list.insert('jessica');
+      list.insert('zach');
+      list.insert('jonah');
+      list.insertBefore('zach', 6);
+      expect(list.toString()).toEqual('jonah , 6 , zach , jessica , brad , ');
+    })
+    it('Can successfully insert a node before the first node of a linked list', () =>{
+      let list = new Linkedlist();
+      list.insert('brad');
+      list.insert('jessica');
+      list.insert('zach');
+      list.insert('jonah');
+      list.insertBefore('jonah', 6);
+      expect(list.toString()).toEqual('6 , jonah , zach , jessica , brad , ');
+    })
+    it('Can successfully insert after a node in the middle of the linked list', () => {
+      let list = new Linkedlist();
+      list.insert('brad');
+      list.insert('jessica');
+      list.insert('zach');
+      list.insert('jonah');
+      list.insertAfter('zach', 6);
+      expect(list.toString()).toEqual('jonah , zach , 6 , jessica , brad , ');
+    })
+    it('Can successfully insert a node after the last node of the linked list', () => {
+      let list = new Linkedlist();
+      list.insert('brad');
+      list.insert('jessica');
+      list.insert('zach');
+      list.insert('jonah');
+      list.insertAfter('brad', 6);
+      expect(list.toString()).toEqual('jonah , zach , jessica , brad , 6 , ');
+    });
   });
-  test('Can successfully add multiple nodes to the end of a linked list', () => {
-    let list = new Linkedlist();
-    list.insert('brad');
-    list.insert('jessica');
-    list.insert('zach');
-    list.insert('jonah');
-    list.append(2);
-    list.append(4);
-    list.append(6);
-    list.append(8);
-    expect(list.toString()).toEqual('jonah , zach , jessica , brad , 2 , 4 , 6 , 8 , ');
-  });
-  test('Can successfully insert a node before a node located in the middle of a linked list', () =>{
-    let list = new Linkedlist();
-    list.insert('brad');
-    list.insert('jessica');
-    list.insert('zach');
-    list.insert('jonah');
-    list.insertBefore('zach', 6);
-    expect(list.toString()).toEqual('jonah , 6 , zach , jessica , brad , ');
-  })
-  test('Can successfully insert a node before the first node of a linked list', () =>{
-    let list = new Linkedlist();
-    list.insert('brad');
-    list.insert('jessica');
-    list.insert('zach');
-    list.insert('jonah');
-    list.insertBefore('jonah', 6);
-    expect(list.toString()).toEqual('6 , jonah , zach , jessica , brad , ');
-  })
-  test('Can successfully insert after a node in the middle of the linked list', () => {
-    let list = new Linkedlist();
-    list.insert('brad');
-    list.insert('jessica');
-    list.insert('zach');
-    list.insert('jonah');
-    list.insertAfter('zach', 6);
-    expect(list.toString()).toEqual('jonah , zach , 6 , jessica , brad , ');
-  })
-  test('Can successfully insert a node after the last node of the linked list', () => {
-    let list = new Linkedlist();
-    list.insert('brad');
-    list.insert('jessica');
-    list.insert('zach');
-    list.insert('jonah');
-    list.insertAfter('brad', 6);
-    expect(list.toString()).toEqual('jonah , zach , jessica , brad , 6 , ');
-  })
 
 
   //Challenge 7 tests
-  test('Where k is greater than the length of the linked list', () => {
-    let list = new Linkedlist();
-    list.insert('brad');
-    list.insert('jessica');
-    list.insert('zach');
-    list.insert('jonah');
-    expect( function(){list.kFromTheEnd(8)}).toThrow(new Error('There is no node here, try a smaller value.'));
+  describe('testing kFromTheEnd method', () => {
+    it('Where k is greater than the length of the linked list', () => {
+      let list = new Linkedlist();
+      list.insert('brad');
+      list.insert('jessica');
+      list.insert('zach');
+      list.insert('jonah');
+      expect( function(){list.kFromTheEnd(8)}).toThrow(new Error('There is no node here, try a smaller value.'));
+    });
+    it('Where k and the length of the list are the same', () =>{
+      list.insert('brad');
+      list.insert('jessica');
+      list.insert('zach');
+      list.insert('jonah');
+      expect(list.kFromTheEnd(4)).toBeUndefined();
+    });
+    it('Where k is not a positive integer', () =>{
+      let list = new Linkedlist();
+      list.insert('brad');
+      list.insert('jessica');
+      list.insert('zach');
+      list.insert('jonah');
+      expect(list.kFromTheEnd(-2)).toEqual(undefined);
+      expect(list.kFromTheEnd('hi')).toEqual(undefined);
+    });
+    it('Where the linked list is of a size 1', () => {
+      let list = new Linkedlist();
+      list.insert('brad');
+      expect(list.kFromTheEnd(-2)).toEqual(undefined);
+    });
+    test('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list', () => {
+      let list = new Linkedlist();
+      list.insert('brad');
+      list.insert('jessica');
+      list.insert('zach');
+      list.insert('jonah');
+      expect(list.kFromTheEnd(2)).toEqual('zach');
+    })
   });
-  test('Where k and the length of the list are the same', () =>{
-    list.insert('brad');
-    list.insert('jessica');
-    list.insert('zach');
-    list.insert('jonah');
-    expect(list.kFromTheEnd(4)).toBeUndefined();
-  })
-  test('Where k is not a positive integer', () =>{
-    let list = new Linkedlist();
-    list.insert('brad');
-    list.insert('jessica');
-    list.insert('zach');
-    list.insert('jonah');
-    expect(list.kFromTheEnd(-2)).toEqual(undefined);
-    expect(list.kFromTheEnd('hi')).toEqual(undefined);
-  })
-  test('Where the linked list is of a size 1', () => {
-    let list = new Linkedlist();
-    list.insert('brad');
-    expect(list.kFromTheEnd(-2)).toEqual(undefined);
-  })
-  test('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list', () => {
-    let list = new Linkedlist();
-    list.insert('brad');
-    list.insert('jessica');
-    list.insert('zach');
-    list.insert('jonah');
-    expect(list.kFromTheEnd(2)).toEqual('zach');
-  })
+
+  //challenge 8 -merge tests
+
+  describe('testing mergeLists method', () => {
+    it('should merge the values of 2 linked lists', () => {
+      let l1 = new Linkedlist();
+      let l2 = new Linkedlist();
+
+      l1.append(5);
+      l1.append(3);
+      l1.append(1);
+      l2.append(2);
+      l2.append(4);
+      l2.append(6);
+
+      let result = mergeLists(l1, l2);
+      expect(result.value).toEqual(l1.head.value);
+    });
+
+    it('merge two lists of different sizes.', () => {
+      let l1 = new Linkedlist();
+      let l2 = new Linkedlist();
+
+      l1.append(5);
+      l1.append(3);
+      l1.append(1);
+      l2.append(2);
+      l2.append(4);
+      l2.append(6);
+      l2.append('bigger');
+      l2.append('more bigger');
+      let newList = mergeLists(l1, l2);
+      expect(newList.value).toEqual(l1.head.value);
+    });
+
+    it('should throw a Error if a parameter value is not a linked list', () => {
+      let l2 = new Linkedlist();
+      l2.append(2);
+      expect( function(){mergeLists('banana', l2)}).toThrow(new Error('Parameter must be a linked-list'));
+    });
+
+  });
 
 });
 

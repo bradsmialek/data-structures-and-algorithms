@@ -1,5 +1,7 @@
 'use strict'
 
+// let mergeList = require('./llMerge/ll-merge.js');
+
 class Node {
   constructor(value) {
     this.value = value;
@@ -145,6 +147,7 @@ class LinkedList {
     output += `] -> ${current}`;
     console.log(output);
   }
+  
 }
 
 let list = new LinkedList();
@@ -153,17 +156,17 @@ list.insert(14);
 list.insert(12);
 list.insert(10);
 list.showLinkedList();
-// list.append('8');
-// list.append('6');
-// list.includes(12);
-// list.includes(19);
-// list.toString();
-// list.insertAfter(14, 'After');
-// list.showLinkedList();
-// list.insertAfter(10, 'You');
-// list.showLinkedList();
-// list.kFromTheEnd(2);
-// list.showLinkedList();
+list.append('8');
+list.append('6');
+list.includes(12);
+list.includes(19);
+list.toString();
+list.insertAfter(14, 'After');
+list.showLinkedList();
+list.insertAfter(10, 'You');
+list.showLinkedList();
+list.kFromTheEnd(2);
+list.showLinkedList();
 list.insertBefore(14, 'Before');
 list.showLinkedList();
 list.insertBefore(10,'Head');
