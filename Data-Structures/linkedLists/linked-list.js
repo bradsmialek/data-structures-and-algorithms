@@ -1,6 +1,9 @@
 'use strict'
 
-// let mergeList = require('./llMerge/ll-merge.js');
+let mergeLists = require('./llMerge/ll-merge.js');
+let reverseList = require('../llreverse/ll_reverse.js');
+let stack = require('../stacksAndQueues/queues.js');
+let queue = require('../stacksAndQueues/stacks.js');
 
 class Node {
   constructor(value) {
@@ -171,6 +174,24 @@ list.insertBefore(14, 'Before');
 list.showLinkedList();
 list.insertBefore(10,'Head');
 list.showLinkedList();
+let l1 = new LinkedList();
+let l2 = new LinkedList();
+
+l1.insert(9);
+l1.insert(7);
+l1.insert(5);
+l1.insert(3);
+l1.insert(1);
+
+l2.append(2);
+l2.append(4);
+l2.append(6);
+l2.append(8);
+l1.showLinkedList();
+l2.showLinkedList();
+
+mergeLists(l1,l2);
+reverseList();
 
 module.exports = LinkedList;
 
