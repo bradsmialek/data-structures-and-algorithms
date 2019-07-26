@@ -76,6 +76,7 @@ Write a function called mergeLists which takes two linked lists as arguments. Zi
 
 
 
+
 # DSA Implementation: Stack and a Queue
 
 
@@ -124,6 +125,7 @@ The Stack instances have only push, pop, and peek methods. You should use your o
 ![WhiteBoard](./assets/queuewithstacks.jpg)
 
 
+
 # Code Challenge 12
 ## Authors: Brandyn Vay, Brad Smialek
 ## Challenge
@@ -132,3 +134,4 @@ The Stack instances have only push, pop, and peek methods. You should use your o
 ### Approach & Efficiency
 ### Solution
 ![Code Challenge 12](./assets/.jpg)
+
