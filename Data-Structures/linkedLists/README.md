@@ -126,3 +126,12 @@ The Stack instances have only push, pop, and peek methods. You should use your o
 
 
 
+# Code Challenge 12
+## Authors: Brandyn Vay, Brad Smialek
+## Challenge
+  * Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
+  
+### Approach & Efficiency
+### Solution
+![Code Challenge 12](./assets/.jpg)
+
