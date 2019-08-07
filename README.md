@@ -27,7 +27,7 @@
 - [value-vs-reference](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/value-vs-reference)
 
 ## [Data Structures](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/Data-Structures/linkedLists)
-- [Linked Lists](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/Data-Structures/linkedLists)
+- [Linked Lists](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/linkedLists)
 
 
 ## Code Fellows <a name="introduction"></a>
