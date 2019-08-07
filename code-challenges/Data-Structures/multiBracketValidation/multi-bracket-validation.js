@@ -1,22 +1,29 @@
 'use strict';
 
 
-function multiBracketValidation(string) {
+function parenthesesAreBalanced(string) {
   var parentheses = '[]{}()';
   let stack = [];
-
+  console.log(string);
+    
   for(let i = 0; i < string.length; i++) {
     let character = string[i]
-    let bracketPosition = parentheses.indexOf(character);
+    let bracePosition = parentheses.indexOf(character);
 
-    if(bracketPosition === -1) {
+    console.log('i =',i , 'character =',character, 'bracePosition =', bracePosition);
+
+    if(bracePosition === -1) {
+      console.log(bracePosition === -1);
       continue;
     }
 
-    if(bracketPosition % 2 === 0) {
-      stack.push(bracketPosition + 1); // push next expected brace position
+    if(bracePosition % 2 === 0) {
+      console.log(bracePosition % 2);
+      stack.push(bracePosition + 1); // push next expected brace position
+      console.log('stack =',stack);
     } else {
-      if(stack.length === 0 || stack.pop() !== bracketPosition) {
+      console.log(bracePosition % 2);
+      if(stack.length === 0 || stack.pop() !== bracePosition) {
         return false;
       }
     }
@@ -25,7 +32,9 @@ function multiBracketValidation(string) {
   return stack.length === 0;
 }
 
-multiBracketValidation('[{yup))');
-multiBracketValidation('[[[{star}g]]]');
+parenthesesAreBalanced('[{yup))');
+parenthesesAreBalanced('[[[{star}g]]]');
+parenthesesAreBalanced('[](){}');
+parenthesesAreBalanced('[');
 
-module.exports = multiBracketValidation;
+module.exports = parenthesesAreBalanced;

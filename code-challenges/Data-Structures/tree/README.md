@@ -1,4 +1,4 @@
-# Code Challenge 14: Trees
+# Code Challenge 15: Trees
 
 # Challenge Summary
 Implement a binary and binary search tree
@@ -18,4 +18,4 @@ Define a method named contains that accepts a value, and returns a boolean indic
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## Solution
-![WhiteBoard](./assets/bracket.jpg)
+![WhiteBoard](./assets/.jpg)
