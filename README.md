@@ -28,6 +28,13 @@
 
 ## [Data Structures](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/Data-Structures/linkedLists)
 - [Linked Lists](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/linkedLists)
+- [LlReverse](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/llreverse)
+- [stacks and queues](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/stacksAndQueues)
+- [queue with stacks](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/queueWithStacks)
+- [fifo Animal Shelter](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/fifoAnimalShelter)
+- [multi bracket validation](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/multiBracketValidation)
+- [binary trees](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/tree)
+- [fizz buzz tree](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/fizzBuzzTree)
 
 
 ## Code Fellows <a name="introduction"></a>
