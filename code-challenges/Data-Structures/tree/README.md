@@ -18,4 +18,6 @@ Define a method named contains that accepts a value, and returns a boolean indic
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## Solution
+
 ![WhiteBoard](./assets/.jpg)
+
