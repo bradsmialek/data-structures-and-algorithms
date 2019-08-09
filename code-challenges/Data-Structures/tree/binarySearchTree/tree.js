@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 class Node {
   constructor (val){
     this.value = val;
@@ -14,6 +12,7 @@ class Node {
 class BinaryTree {
   constructor (root = null){
     this.root = root;
+    
   }
 
   preOrder() {
@@ -66,56 +65,40 @@ class BinaryTree {
 
 }
 
-
-
-let ten = new Node(10);
-let four = new Node(4);
-let seven = new Node(7);
-let nine = new Node(9);
-let eleven = new Node(11);
-let twelve = new Node(12);
-
-ten.left = seven;
-ten.right = twelve;
-seven.left = four;
-seven.right = eleven;
-twelve.left = eleven;
-twelve.right = nine;
-
-
-let tree = new BinaryTree(ten);
-console.log(tree);
-console.log('tree preOrder :',tree.preOrder());
-console.log('tree postOrder :',tree.postOrder());
-console.log('tree inOrder :',tree.inOrder());
-console.log('tree levelOrder :',tree.levelOrder());
-
-
-
-
 //BST
-class BinarySearchTree{
-  constructor() {
+class BinarySearchTree extends BinaryTree{
 
+  add(value) {
+
+    let _walk = (node) => {
+      if(value < node.value) {
+        if(node.left) {_walk(node.left);}
+        else {node.left = new Node(value);}
+      } 
+      if(value > node.value) {
+        if(node.right) {_walk(node.right);}
+        else {node.right = new Node(value);}
+      }     
+      return;
+    }
+    _walk(this.root)
   }
 
-  add(val){
-    
-
-  }
-
-  contains(){
+  contains(value){
 
   }
 }
-// insert(value) {
-//create node with value
-//traverse the tree
-//if value
-//}
 
-//let btree = new BinaryTreeSearch();
-// btree.insert(10);
+
+let btree = new BinarySearchTree();
+btree.add(10);
+btree.add(15);
+btree.add(1);
+btree.add(5);
+btree.add(8);
+btree.add(35);
+btree.add(20);
+btree.add(3);
 
 
 
@@ -134,3 +117,13 @@ class BinarySearchTree{
 
 // Write tests to prove the following functionality:
 
+
+let tree = new BinaryTree(10);
+console.log(tree);
+console.log('tree preOrder :',tree.preOrder());
+console.log('tree postOrder :',tree.postOrder());
+console.log('tree inOrder :',tree.inOrder());
+console.log('tree levelOrder :',tree.levelOrder());
+
+
+module.exports = BinarySearchTree;
