@@ -10,4 +10,6 @@ Write a breadth first traversal method which takes a Binary Tree as its unique i
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## Solution
+
 ![WhiteBoard](./assets/breadth.jpg)
+
