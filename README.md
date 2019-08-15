@@ -26,7 +26,11 @@
 - [two-dimensional-arrays](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/two-dimensional-arrays)
 - [value-vs-reference](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/value-vs-reference)
 
+<<<<<<< HEAD
 ## [Data Structures](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/Data-Structures)
+=======
+## [Data Structures](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures)
+>>>>>>> 00927b617dd257a17d5607e2d0d77c0fa714aa4a
 - [Linked Lists](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/linkedLists)
 - [LlReverse](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/llreverse)
 - [stacks and queues](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/stacksAndQueues)
@@ -35,7 +39,10 @@
 - [multi bracket validation](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/multiBracketValidation)
 - [binary trees](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/tree)
 - [fizz buzz tree](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/fizzBuzzTree)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 00927b617dd257a17d5607e2d0d77c0fa714aa4a
 
 
 ## Code Fellows <a name="introduction"></a>
