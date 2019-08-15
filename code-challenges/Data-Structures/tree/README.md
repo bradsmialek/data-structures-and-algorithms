@@ -57,4 +57,8 @@ Write a function called find-maximum-value which takes binary tree as its only i
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## Solution
+<<<<<<< HEAD
 ![WhiteBoard](./assets/max.jpeg)
+=======
+![WhiteBoard](./assets/max.jpeg)
+>>>>>>> 00927b617dd257a17d5607e2d0d77c0fa714aa4a
