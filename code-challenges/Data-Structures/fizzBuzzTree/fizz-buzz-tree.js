@@ -18,7 +18,7 @@ class BinarySearchTree{
   constructor() {
 
     this.root = null;
-    
+
   }
 
   insert(value){
@@ -40,7 +40,7 @@ class BinarySearchTree{
         if(current.right === null){
           current.right = newNode;
           return this;
-        } 
+        }
         current = current.right;
       }
       if(value === current.value) return undefined;
@@ -54,7 +54,7 @@ class BinarySearchTree{
         if(current.left === null){
           current.left = newNode;
           return this;
-        } 
+        }
         current = current.left;
       }
     }
