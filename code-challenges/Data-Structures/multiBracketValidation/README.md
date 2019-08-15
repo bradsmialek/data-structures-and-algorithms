@@ -14,4 +14,4 @@ Curly Brackets : {}
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## Solution
-![WhiteBoard](./assets/bracket.jpg)
+![WhiteBoard](./assets/bracket.jpeg)
