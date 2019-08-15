@@ -20,7 +20,10 @@ Define a method named contains that accepts a value, and returns a boolean indic
 ## Solution
 ![WhiteBoard](./assets/tree.jpg)
 
-
+<br />
+<br />
+<br />
+<br />
 
 # Code Challenge 17: Breadth
 
@@ -34,8 +37,12 @@ Write a breadth first traversal method which takes a Binary Tree as its unique i
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## Solution
-
 ![WhiteBoard](./assets/breadth.jpg)
+
+<br />
+<br />
+<br />
+<br />
 
 
 # Code Challenge 18: Max Value
@@ -50,9 +57,4 @@ Write a function called find-maximum-value which takes binary tree as its only i
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## Solution
-![WhiteBoard](./assets/max.jpg)
-
-
-
-
-
+![WhiteBoard](./assets/max.jpeg)
