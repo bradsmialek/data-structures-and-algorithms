@@ -34,6 +34,7 @@ Write a breadth first traversal method which takes a Binary Tree as its unique i
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## Solution
+
 ![WhiteBoard](./assets/breadth.jpg)
 
 
@@ -50,3 +51,8 @@ Write a function called find-maximum-value which takes binary tree as its only i
 
 ## Solution
 ![WhiteBoard](./assets/max.jpg)
+
+
+
+
+
