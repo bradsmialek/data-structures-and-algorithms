@@ -1,6 +1,9 @@
 # Code Challenge 13: MULTI-BRACKET VALIDATION
 
-# Challenge Summary
+# Authors
+Brad Smialek and Brandyn Vay
+
+## Challenge Summary
 Multi bracket validation
 
 ## Challenge Description
@@ -10,8 +13,11 @@ Round Brackets : ()
 Square Brackets : []
 Curly Brackets : {}
 
+<img src="./assets/multibracket.png" alt="drawing" width="500"/>
+
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+What approach did you take? Why? What is the Big O space/time for this approach?
 
 ## Solution
-![WhiteBoard](./assets/bracket.jpeg)
+
+<img src="./assets/bracket.jpeg" alt="drawing" width="500"/>

@@ -1,11 +1,10 @@
 'use strict';
 
-
+debugger;
 function parenthesesAreBalanced(string) {
   var parentheses = '[]{}()';
   let stack = [];
-  console.log(string);
-    
+  if(typeof string !== 'string'){return null;}
   for(let i = 0; i < string.length; i++) {
     let character = string[i]
     let bracePosition = parentheses.indexOf(character);
@@ -32,9 +31,9 @@ function parenthesesAreBalanced(string) {
   return stack.length === 0;
 }
 
-parenthesesAreBalanced('[{yup))');
-parenthesesAreBalanced('[[[{star}g]]]');
+// parenthesesAreBalanced('[{yup))');
+// parenthesesAreBalanced('[[[{star}g]]]');
 parenthesesAreBalanced('[](){}');
-parenthesesAreBalanced('[');
+// parenthesesAreBalanced('[');
 
 module.exports = parenthesesAreBalanced;
