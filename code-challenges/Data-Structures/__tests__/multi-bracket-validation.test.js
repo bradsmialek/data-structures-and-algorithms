@@ -1,29 +1,37 @@
 'use strict';
 
-const multiBracket = require('../../multiBracketValidation/multi-bracket-validation.js');
+const multiBracket = require('../multiBracketValidation/multi-bracket-validation.js');
 
 //Test should include;
 // “Happy Path” - Expected outcome
 // Expected failure
 // Edge Case (if applicable/obvious)
 
-describe('Queue with stacks tests', () => {
-  it('can enqueue things', () => {
-    let qs = new AnimalQ;
-    qs.enqueue(5);
-    qs.enqueue(10);
-    qs.enqueue(15);
-    qs.enqueue(20);
-    expect(qs.stack1.top.value).toBe(20)
+describe('multi-Bracket Validation', () => {
+  
+  it('should return `null` for an argument that is not a string', () => {
+    const str = 0;
+    expect(multiBracket(str)).toBeNull();
   });
 
-  it('can dequeue things', () => {
-    let qs = new AnimalQ;
-    qs.enqueue(5);
-    qs.enqueue(10);
-    qs.enqueue(15);
-    qs.enqueue(20);
-    expect(qs.dequeue()).toBe(5)
+  it('should return false for a single starting bracket', () => {
+    const str = '{';
+    expect(multiBracket(str)).toBeFalsy();
   });
 
-})
+  it('should return true for consecutive paired brackets', () => {
+    const str = '{}(){}';
+    expect(multiBracket(str)).toBeTruthy();
+  });
+
+  it('should return true for balanced brackets with nested non-bracket characters', () => {
+    const str = '[[[{star}g]]]';
+    expect(multiBracket(str)).toBeTruthy();
+  });
+
+  it('should be false if the brackets are unbalanced', () => {
+    const str = '[({})';
+    expect(multiBracket(str)).toBeFalsy();
+  });
+
+});
