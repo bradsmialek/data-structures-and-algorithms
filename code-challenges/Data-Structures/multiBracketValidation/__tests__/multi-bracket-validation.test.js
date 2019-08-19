@@ -1,6 +1,6 @@
 'use strict';
 
-const multiBracket = require('../multiBracketValidation/multi-bracket-validation.js');
+const multiBracket = require('../multi-bracket-validation.js');
 
 //Test should include;
 // “Happy Path” - Expected outcome
