@@ -1,5 +1,5 @@
 # Code Challenge 13: MULTI-BRACKET VALIDATION
- 
+
 # Authors
 Brad Smialek and Brandyn Vay
 
