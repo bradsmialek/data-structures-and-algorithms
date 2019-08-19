@@ -1,7 +1,10 @@
-# Code Challenge 15: Trees
+# DSA Implementation: Binary Tree and BST
+
+# Authors
+Brad Smialek and Brandyn Vay
 
 # Challenge Summary
-Implement a binary and binary search tree
+Implement a binary tree and binary search tree
 
 ## Challenge Description
 Features
@@ -16,9 +19,22 @@ Define a method named contains that accepts a value, and returns a boolean indic
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Time complexity
+O(n)
+Space complexity
+
+//Constant runtime 
+//Big O notation: "O (1)"
+
+//Linear runtime
+//Big O notation: "O (n)"
+
+//Exponential runtime
+//Big O notation: "O (n^2)"
 
 ## Solution
-![WhiteBoard](./assets/tree.jpg)
+<img src="./assets/tree.jpg" alt="drawing" width="500"/>
+
 
 <br />
 <br />
@@ -30,14 +46,30 @@ Define a method named contains that accepts a value, and returns a boolean indic
 # Challenge Summary
 Breadth-first Traversal.
 
+# Authors
+Brad Smialek and Brandyn Vay
+
 ## Challenge Description
 Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach; print every visited node’s value.
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Time complexity
+O(n)
+Space complexity
+
+//Constant runtime 
+//Big O notation: "O (1)"
+
+//Linear runtime
+//Big O notation: "O (n)"
+
+//Exponential runtime
+//Big O notation: "O (n^2)"
 
 ## Solution
-![WhiteBoard](./assets/breadth.jpg)
+<img src="./assets/breadth.jpg" alt="drawing" width="500"/>
+
 
 <br />
 <br />
@@ -50,15 +82,27 @@ Write a breadth first traversal method which takes a Binary Tree as its unique i
 # Challenge Summary
 Find the max value in a tree.
 
+# Authors
+Brad Smialek and Brandyn Vay
+
 ## Challenge Description
 Write a function called find-maximum-value which takes binary tree as its only input. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Time complexity
+O(n)
+Space complexity
+
+//Constant runtime 
+//Big O notation: "O (1)"
+
+//Linear runtime
+//Big O notation: "O (n)"
+
+//Exponential runtime
+//Big O notation: "O (n^2)"
 
 ## Solution
-<<<<<<< HEAD
-![WhiteBoard](./assets/max.jpeg)
-=======
-![WhiteBoard](./assets/max.jpeg)
->>>>>>> 00927b617dd257a17d5607e2d0d77c0fa714aa4a
+<img src="./assets/max.jpeg" alt="drawing" width="500"/>
+

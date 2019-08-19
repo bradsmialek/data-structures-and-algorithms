@@ -26,12 +26,12 @@ class Stack {
 
 };
 
-let stack = new Stack();
-stack.push(1);
-stack.push(2);
-stack.push(3);
-console.log(stack.stack);
-console.log(stack.pop());
-console.log(stack.peek());
+// let stack = new Stack();
+// stack.push(1);
+// stack.push(2);
+// stack.push(3);
+// console.log(stack.stack);
+// console.log(stack.pop());
+// console.log(stack.peek());
 
 module.exports = Stack;

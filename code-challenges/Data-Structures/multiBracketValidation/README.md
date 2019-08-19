@@ -1,8 +1,5 @@
 # Code Challenge 13: MULTI-BRACKET VALIDATION
-
-[![Build Status]()  
-
-
+ 
 # Authors
 Brad Smialek and Brandyn Vay
 
