@@ -1,5 +1,8 @@
 # Code Challenge 5  DSA Implementation: Linked List
 
+# Authors
+Brad Smialek
+
 # Challenge Summary
 Implement a Singly Linked List Data Structure
 
@@ -11,37 +14,77 @@ Define a method called toString (or __str__ in Python) which takes in no argumen
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
+O(1) Time performance
+
+Time complexity
+O(n)
+Space complexity
+
+//Constant runtime 
+//Big O notation: "O (1)"
+
+//Linear runtime
+//Big O notation: "O (n)"
+
+//Exponential runtime
+//Big O notation: "O (n^2)"
+
 ## Solution
-
-![WhiteBoard](./assets/ll_insertions.jpg)
-
-![WhiteBoard](./assets/ll_insertions2.jpg)
+<img src="./assets/ll_insertions.jpg" alt="drawing" width="500"/>
 
 
+<br />
+<br />
+<br />
+<br />
 
-# Code Challenge 06: Linked Lists
+
+# Code Challenge 06: Linked Lists (Insertions)
 
 # Singly Linked List
 Linked list insertions.
 
 ## Challenge
-.append(value) which adds a new node with the given value to the end of the list
-.insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
-.insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+* `.append(value) which adds a new node with the given value to the end of the list`
+<br />
+<img src="./assets/append.png" alt="drawing" width="1000" heigth="500"/>
+<br />
+* `.insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node`
+<br />
+<img src="./assets/before.png" alt="drawing" width="1000" heigth="500"/>
+<br />
+* `.insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node`
+<br />
+<img src="./assets/after.png" alt="drawing" width="1000" heigth="500"/>
+<br />
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
+Time complexity
+O(n)
+Space complexity
+
+//Constant runtime 
+//Big O notation: "O (1)"
+
+//Linear runtime
+//Big O notation: "O (n)"
+
+//Exponential runtime
+//Big O notation: "O (n^2)"
+
 ## Solution
-
-![WhiteBoard](./assets/ll_insertions.jpg)
-
-![WhiteBoard](./assets/ll_insertions2.jpg)
+<img src="./assets/ll_insertions2.jpg" alt="drawing" width="800" height="800"/>
 
 
 
+<br />
+<br />
+<br />
+<br />
 
-# Code Challenge 07: Linked Lists
+# Code Challenge 07: Linked Lists(Kth Value)
 
 # Challenge Summary
 k-th value from the end of a linked list.
@@ -52,27 +95,28 @@ Write a method for the Linked List class which takes a number, k, as a parameter
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
-## Solution
-<!-- Embedded whiteboard image -->
+Time complexity
+O(n)
+Space complexity
 
-![WhiteBoard](./assets/ll_kth_from_end.jpg)
+//Constant runtime 
+//Big O notation: "O (1)"
 
+//Linear runtime
+//Big O notation: "O (n)"
 
-
-# Code Challenge 8: Linked List
-
-# Challenge Summary
-Merge two linked lists
-
-## Challenge Description
-Write a function called mergeLists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list. Try and keep additional space down to O(1). You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
-
-## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+//Exponential runtime
+//Big O notation: "O (n^2)"
 
 ## Solution
+<img src="./assets/ll_kth_from_end.jpg" alt="drawing" width="500" height="500"/>
 
-![WhiteBoard](./assets/ll_merge.jpeg)
+
+
+<br />
+<br />
+<br />
+<br />
 
 
 
@@ -101,6 +145,19 @@ Be sure to follow your languages best practices for naming conventions.
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
+Time complexity
+O(n)
+Space complexity
+
+//Constant runtime 
+//Big O notation: "O (1)"
+
+//Linear runtime
+//Big O notation: "O (n)"
+
+//Exponential runtime
+//Big O notation: "O (n^2)"
+
 ## API
 <!-- Description of each method publicly available to your Stack and Queue-->
 
@@ -121,8 +178,23 @@ The Stack instances have only push, pop, and peek methods. You should use your o
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
+Time complexity
+O(n)
+Space complexity
+
+//Constant runtime 
+//Big O notation: "O (1)"
+
+//Linear runtime
+//Big O notation: "O (n)"
+
+//Exponential runtime
+//Big O notation: "O (n^2)"
+
 ## Solution
-![WhiteBoard](./assets/queuewithstacks.jpg)
+<img src="./assets/queuewithstacks.jpg" alt="drawing" width="500" height="500"/>
+
+
 
 
 
@@ -134,7 +206,23 @@ The Stack instances have only push, pop, and peek methods. You should use your o
   * Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
   
 ### Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+Time complexity
+O(n)
+Space complexity
+
+//Constant runtime 
+//Big O notation: "O (1)"
+
+//Linear runtime
+//Big O notation: "O (n)"
+
+//Exponential runtime
+//Big O notation: "O (n^2)"
 
 ### Solution
-![Code Challenge 12](./assets/animal.jpeg)
+<img src="./assets/animal.jpeg" alt="drawing" width="500" height="500"/>
+
+
 

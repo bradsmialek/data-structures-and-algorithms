@@ -15,13 +15,13 @@ function reverseList(){
 
 
 
-let list = new LinkedList();
+// let list = new LinkedList();
 
-list.insert(4);
-list.insert(3);
-list.insert(2);
-list.insert(1);
-list.showLinkedList();
+// list.insert(4);
+// list.insert(3);
+// list.insert(2);
+// list.insert(1);
+// list.showLinkedList();
 
 
 
