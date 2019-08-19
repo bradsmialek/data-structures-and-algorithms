@@ -1,39 +1,25 @@
 'use strict';
 
-debugger;
 function parenthesesAreBalanced(string) {
-  var parentheses = '[]{}()';
+  let bracketString = '[]{}()';
   let stack = [];
   if(typeof string !== 'string'){return null;}
   for(let i = 0; i < string.length; i++) {
-    let character = string[i]
-    let bracePosition = parentheses.indexOf(character);
-
-    console.log('i =',i , 'character =',character, 'bracePosition =', bracePosition);
-
-    if(bracePosition === -1) {
-      console.log(bracePosition === -1);
+    let typeOfBracket = string[i]
+    let bracketIndexPosition = bracketString.indexOf(typeOfBracket);
+    if(bracketIndexPosition === -1) {
       continue;
     }
-
-    if(bracePosition % 2 === 0) {
-      console.log(bracePosition % 2);
-      stack.push(bracePosition + 1); // push next expected brace position
-      console.log('stack =',stack);
+    if(bracketIndexPosition % 2 === 0) {
+      stack.push(bracketIndexPosition + 1);
     } else {
-      console.log(bracePosition % 2);
-      if(stack.length === 0 || stack.pop() !== bracePosition) {
+      if(stack.length === 0 || stack.pop() !== bracketIndexPosition) {
         return false;
       }
     }
   }
-
   return stack.length === 0;
 }
 
-// parenthesesAreBalanced('[{yup))');
-// parenthesesAreBalanced('[[[{star}g]]]');
-parenthesesAreBalanced('[](){}');
-// parenthesesAreBalanced('[');
 
 module.exports = parenthesesAreBalanced;
