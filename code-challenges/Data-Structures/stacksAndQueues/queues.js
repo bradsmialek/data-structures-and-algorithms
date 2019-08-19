@@ -1,6 +1,5 @@
 'use strict';
 
-const LinkedList = require('../linkedLists/linked-list.js');
 
 class Queue {
   constructor() {

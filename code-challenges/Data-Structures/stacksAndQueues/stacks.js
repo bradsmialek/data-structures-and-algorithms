@@ -1,10 +1,10 @@
 'use strict';
 
-const LinkedList = require('../linkedLists/linked-list.js');
+const Node = require('../linkedLists/node.js');
 
 
 class Stack {
-  
+
   constructor() {
 
     this.top = null;
@@ -13,18 +13,18 @@ class Stack {
   push(item){
     this.top = new Node(item, this.top);
   }
-  
+
   pop(){
     let item = this.stack.pop();
     this.top = this.stack[this.stack.length-1];
     return item;
   }
-  
+
   peek(){
     return this.top;
   }
 
-};
+}
 
 // let stack = new Stack();
 // stack.push(1);
