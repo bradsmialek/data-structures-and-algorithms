@@ -2,21 +2,27 @@
 
 const Node = require('../linkedLists/node.js');
 
+// class Node {
+//   constructor(value) {
+//     this.value = value;
+//     this.next = null;
 
 class Stack {
 
   constructor() {
-
     this.top = null;
-    this.bottom = null;
+    this.stack = [];
   }
   push(item){
-    this.top = new Node(item, this.top);
+    this.stack.push(item);
+    this.top = new Node(item);
+
   }
 
   pop(){
+
     let item = this.stack.pop();
-    this.top = this.stack[this.stack.length-1];
+    this.top.value = this.stack[this.stack.length-1];
     return item;
   }
 
@@ -30,7 +36,7 @@ class Stack {
 // stack.push(1);
 // stack.push(2);
 // stack.push(3);
-// console.log(stack.stack);
+// console.log(stack);
 // console.log(stack.pop());
 // console.log(stack.peek());
 
