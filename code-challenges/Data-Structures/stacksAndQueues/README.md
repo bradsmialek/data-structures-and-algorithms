@@ -4,7 +4,11 @@
 Brad Smialek
 
 # Challenge Summary
-Implement a Stack and a Queue Data Structure
+* Implement a Stack and a Queue Data Structure
+<br>
+<img src="./assets/que.png" alt="drawing" width="800" height="500"/>
+<br>
+<img src="./assets/stack.png" alt="drawing" width="800" height="500"/>
 
 ## Challenge Description
 * Create a Node class that has properties for the value stored in the Node, and a pointer to the next node.
