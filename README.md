@@ -39,9 +39,9 @@
 - [binary trees](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/tree)
 - [fizz buzz tree](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/fizzBuzzTree)
 - [Repeat Word](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/repeatedWord)
-- [Insertion Sort]()
-- [Quick Sort]()
-- [Merge Sort]()
+- [Insertion Sort](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/InsertionSort)
+- [Quick Sort](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/quickSort)
+- [Merge Sort](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/mergeSort)
 
 
 
