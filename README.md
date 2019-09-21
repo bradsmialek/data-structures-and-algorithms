@@ -2,13 +2,11 @@
 # Data Structures and Algorithms
 
 # Author - Brad Smialek
-## Code Fellows
-### 301- Intermediate Javascript
-### 401- Advanced Javascript
-  
 
 # Table of contents
 
+### 301- Intermediate Javascript
+ 
 ## [Code Challenges](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges)
 - [Array-foreach](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/array-foreach)
 - [Chaining](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/chaining)
@@ -26,7 +24,7 @@
 - [two-dimensional-arrays](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/two-dimensional-arrays)
 - [value-vs-reference](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/value-vs-reference)
 
-
+### 401- Advanced Javascript
 
 ## [Data Structures](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures)
 
