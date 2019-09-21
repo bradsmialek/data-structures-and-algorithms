@@ -40,8 +40,8 @@
 - [Insertion Sort](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/InsertionSort)
 - [Quick Sort](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/quickSort)
 - [Merge Sort](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/mergeSort)
-- [common values in 2 binary trees]()
-
+- [common values in 2 binary trees(tree intersection)](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/treeIntersection)
+- [Hash Tables]()
 
 
 
