@@ -38,6 +38,10 @@
 - [multi bracket validation](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/multiBracketValidation)
 - [binary trees](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/tree)
 - [fizz buzz tree](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/fizzBuzzTree)
+- [Repeat Word](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/repeatedWord)
+- [Insertion Sort]()
+- [Quick Sort]()
+- [Merge Sort]()
 
 
 
