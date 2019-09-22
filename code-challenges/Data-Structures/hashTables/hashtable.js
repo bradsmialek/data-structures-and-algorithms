@@ -1,53 +1,52 @@
 'use strict';
 
-class Node {
-  constructor(value) {
-    this.value = value;
-    this.next = null;
+class HashMap {
+  constructor(size) {
+    this.size = size;
+    this.map = new Array(size);
+  }
+
+  hash(key) {
+    return key.split('').reduce( (acc,val) => {
+      return acc + val.charCodeAt(0)
+    }, 0) * 599 % this.size;
+  }
+
+  set(key,value) {
+    let hashValue = this.hash(key);
+    if( !this.map[hashValue]) { this.map[hashValue] = []; }
+    this.map[hashValue].push({[key]:value});
+  }
+
+  has(key) {
+    let hashKey = this.hash(key);
+    for(let i=0; i<this.map[hashKey].length; i++) {
+      if( this.map[hashKey][i][key] ) { return true;}
+    }
+    return false;
+  }
+
+  get(key) {
 
   }
+
 }
 
-class LinkedList {
-  constructor() {
-    this.head = null;
-  }
-  
-  insert(value) {
-    let newNode = new Node(value)
-    newNode.next = this.head;
-    this.head = newNode;
+let map = new HashMap(16);
+map.set('John', 'John Cokos');
+map.set('Rosie', 'Rosie Cokos');
+map.set('Allie', 'Allie Cokos');
+map.set('Zach', 'Zach Cokos');
+map.set('x', 'x');
+map.set('acc', 'acc');
+map.set('b', 'Jx');
+map.set('d', 'Jxdfd');
+map.set('foo', 'sdfasdf');
+map.set('far', 'fdsfd');
+map.set('adsfljds', 'xill');
 
-  }
-  
-  includes(value) { //(12)
-    let current = this.head// [10] start
-    // console.log('current = ',current);
-    while (current) {
-      if (current.value === value) {
-        // console.log(true);
-        return true;
-      }
-      else if (current === null){
-        // console.log(false);
-        return false;
-      }
-      current = current.next;
-    }
-  }
+console.log(map.has('far'));
 
-  
-  append(value){ // [8]
-    if(this.head === null){
-      this.head = new Node(value); 
-      return; 
-    }
-    let current = this.head; 
-    while(current.next){ 
-      current = current.next;
-    }
-    current.next = new Node(value);
-  }
-}
+console.log(map);
 
 
