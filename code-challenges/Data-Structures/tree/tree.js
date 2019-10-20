@@ -68,6 +68,17 @@ class BinaryTree {
     return currNode.value;
   }
 }
+
+//--------------------------BST
+// class Node {
+
+//   constructor (val) {
+//     this.value = val;
+//     this.left = null;
+//     this.right = null;
+//   }
+// }
+
 class BinarySearchTree extends BinaryTree {
   constructor (root = null) {
     super();

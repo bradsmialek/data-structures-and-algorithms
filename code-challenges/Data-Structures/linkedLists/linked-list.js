@@ -16,7 +16,7 @@ class LinkedList {
   // [10]->[12]->[14]->null
   // 1. make node [8]
   // 2. insert new node at beginning [8]->[10]->[12]...
-  insert(value) {
+  insert(value) { //prepend
     let newNode = new Node(value)//new node made
     newNode.next = this.head;//this.head is still [10] now we make new node point(next) to [10]  // [8]->[10]
     this.head = newNode;// now make the head the new node [8]
@@ -146,7 +146,6 @@ class LinkedList {
     output += `] -> ${current}`;
     console.log(output);
   }
-  
 }
 
 // let list = new LinkedList();
