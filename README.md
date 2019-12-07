@@ -1,11 +1,10 @@
 
-# Data Structures and Algorithms
-
-# Author - Brad Smialek
+# Data Structures and Algorithms 
+### JavaScript Code Challenges
+Created to display my journey through 301 and 401 code challenges working with algorithms and data structures.
+### Author - Brad Smialek
 
 # Table of contents
-
-### 301- Intermediate Javascript
  
 ## [Code Challenges](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges)
 - [Array-foreach](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/array-foreach)
@@ -24,7 +23,6 @@
 - [two-dimensional-arrays](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/two-dimensional-arrays)
 - [value-vs-reference](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/value-vs-reference)
 
-### 401- Advanced Javascript
 
 ## [Data Structures](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures)
 
@@ -43,16 +41,6 @@
 - [common values in 2 binary trees(tree intersection)](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures/treeIntersection)
 - [Hash Tables]()
 
+## [Algorithms](https://github.com/bjwine0/data-structures-and-algorithms/tree/master/code-challenges/Data-Structures)
 
 
-## Code Fellows <a name="introduction"></a>
-This page features my journey through 301 and 401 code challenges working with algorithms and data structures. 
-
-## Some paragraph <a name="paragraph1"></a>
-The first paragraph text
-
-### Sub paragraph <a name="subparagraph1"></a>
-This is a sub paragraph, formatted in heading 3 style
-
-## Another paragraph <a name="paragraph2"></a>
-The second paragraph text
